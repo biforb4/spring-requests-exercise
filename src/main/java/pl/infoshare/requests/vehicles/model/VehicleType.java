@@ -3,7 +3,6 @@ package pl.infoshare.requests.vehicles.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.function.Predicate;
 
 public enum VehicleType {
     BUS {
