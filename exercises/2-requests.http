@@ -2,5 +2,5 @@ GET http://localhost:8080/vehicles?type=BUS&minMileage=90000
 X-CITY: Warszawa
 
 ###
-GET http://localhost:8080/vehicles?needsReview
+GET http://localhost:8080/vehicles?needsReview=true
 

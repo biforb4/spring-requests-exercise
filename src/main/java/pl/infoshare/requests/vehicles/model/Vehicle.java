@@ -20,4 +20,8 @@ public class Vehicle {
     @With
     BigDecimal lastReviewMileage;
     String city;
+
+    public boolean shouldBeReviewed() {
+        return type.shouldBeReviewed(this);
+    }
 }

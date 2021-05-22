@@ -17,8 +17,13 @@ public class VehicleController {
     private final VehicleFindService vehicleFindService;
 
     @RequestMapping("/vehicles")
-    public List<Vehicle> findAllVehicles() {
-        return vehicleFindService.findVehicles();
+    public List<Vehicle> findAllVehicles(
+            VehicleFilters filters,
+            @RequestHeader(value = "X-CITY", defaultValue = "") String city,
+            @RequestParam(name = "needsReview", defaultValue = "false") boolean needsReview
+    ) {
+        var allFilters = filters.withCity(city).withNeedsReview(needsReview);
+        return vehicleFindService.findVehicles(allFilters);
     }
 
     @PostMapping("/vehicles")
