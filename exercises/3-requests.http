@@ -1,4 +1,4 @@
-GET http://localhost:8080/vehicles?page=1&pageSize=2
+GET http://localhost:8080/vehicles?page=0&pageSize=2
 X-CITY: Tczew
 
 ###

@@ -9,6 +9,4 @@ public class VehicleFilters {
     Integer mileage;
     @With
     String city;
-    @With
-    boolean needsReview;
 }
